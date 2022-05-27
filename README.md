@@ -10,12 +10,12 @@ roslaunch  lego_loam run.launch
 rosbag play campus_isec.bag -r 2 --clock   --topic  /ns1/velodyne_points   /imu/imu
 ```
 
-## Integrate with your tools
+## IMU Alignment
+Because the corrected by the IMU data is based on the sensor motion, the best way to use IMU data as corrected input is that make sure your IMU is aligned with the lidar properly before you collect your own dataset. If not, you should change transfer the IMU frame to "base_link". Like the way we did. In our cars, the IMU frame and the Lidar frame are shown as below.
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:231837243544cebc0a5ba754ea634bd2?https://gitlab.com/PengkaiLyu/eece5554/-/settings/integrations)
+<img src="https://user-images.githubusercontent.com/51788243/170725229-5c6bf6e8-3f32-47b4-95fa-f04c07708513.jpg" width="700">
+
+
 
 ***
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 
